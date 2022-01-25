@@ -2,9 +2,9 @@
 
 namespace Lianmaymesi\Wireblade;
 
+use Lianmaymesi\Wireblade\Commands\WirebladeCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Lianmaymesi\Wireblade\Commands\WirebladeCommand;
 
 class WirebladeServiceProvider extends PackageServiceProvider
 {
