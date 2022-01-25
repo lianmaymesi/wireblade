@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Lianmaymesi\Wireblade\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class WirebladeCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'wireblade';
 
     public $description = 'My command';
 
