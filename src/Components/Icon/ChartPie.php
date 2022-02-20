@@ -6,7 +6,6 @@ use Illuminate\View\Component;
 
 class ChartPie extends Component
 {
-
     public $strokeWidth;
 
     public function __construct($strokeWidth = 2)

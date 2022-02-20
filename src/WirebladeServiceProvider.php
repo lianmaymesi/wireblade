@@ -3,26 +3,26 @@
 namespace Lianmaymesi\Wireblade;
 
 use Illuminate\Support\Facades\Blade;
-use Spatie\LaravelPackageTools\Package;
-use Lianmaymesi\Wireblade\Components\Form;
 use Illuminate\View\Compilers\BladeCompiler;
-use Lianmaymesi\Wireblade\Components\Tooltip;
-use Lianmaymesi\Wireblade\Components\Icon\Sun;
-use Lianmaymesi\Wireblade\Components\Icon\Bell;
-use Lianmaymesi\Wireblade\Components\Icon\Menu;
-use Lianmaymesi\Wireblade\Components\Icon\Moon;
+use Lianmaymesi\Wireblade\Commands\WirebladeCommand;
+use Lianmaymesi\Wireblade\Components\Form;
 use Lianmaymesi\Wireblade\Components\Form\Input;
 use Lianmaymesi\Wireblade\Components\Form\Textarea;
+use Lianmaymesi\Wireblade\Components\Icon\Bell;
 use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
-use Lianmaymesi\Wireblade\Commands\WirebladeCommand;
 use Lianmaymesi\Wireblade\Components\Icon\ChevronDown;
-use Lianmaymesi\Wireblade\Components\Partials\NavHelp;
-use Lianmaymesi\Wireblade\Components\Partials\NavLink;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Lianmaymesi\Wireblade\Components\Icon\ChevronRight;
+use Lianmaymesi\Wireblade\Components\Icon\Menu;
+use Lianmaymesi\Wireblade\Components\Icon\Moon;
+use Lianmaymesi\Wireblade\Components\Icon\Sun;
 use Lianmaymesi\Wireblade\Components\Partials\DropdownLink;
+use Lianmaymesi\Wireblade\Components\Partials\NavHelp;
 use Lianmaymesi\Wireblade\Components\Partials\Navigation;
 use Lianmaymesi\Wireblade\Components\Partials\NavItem;
+use Lianmaymesi\Wireblade\Components\Partials\NavLink;
+use Lianmaymesi\Wireblade\Components\Tooltip;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class WirebladeServiceProvider extends PackageServiceProvider
 {
@@ -41,14 +41,13 @@ class WirebladeServiceProvider extends PackageServiceProvider
         $this->configureComponents();
 
         if ($this->app->runningInConsole()) {
-
             $this->publishes([
                 __DIR__ . '/../public/assets' => public_path('wireblade'),
             ], 'wireblade-assets');
 
             $this->publishes([
                 __DIR__ . './Components' => app_path('View/Components/vendor/wireblade'),
-                __DIR__ . '/../resources/views/components' => resource_path('views/vendor/wireblade/components')
+                __DIR__ . '/../resources/views/components' => resource_path('views/vendor/wireblade/components'),
             ], 'wireblade-components');
         }
 
