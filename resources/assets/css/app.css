@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.tooltip {
+    @apply invisible group-hover:visible w-[150px] bg-black text-white text-center rounded-md p-3 absolute z-[1] text-xs font-medium shadow-md transition-transform duration-300;
+}
+
+.tooltip::after {
+    @apply content-[''] border-4;
+}
+
+.tooltip.ttop {
+    @apply bottom-[150%] -right-[67px] -mt-[15px];
+}
+
+.tooltip.ttop::after {
+    @apply absolute top-full left-[50%] -ml-1 border-t-black border-l-transparent border-b-transparent border-r-transparent;
+}
+
+.tooltip.tbottom {
+    @apply top-[150%] -right-[67px] -mb-[15px];
+}
+
+.tooltip.tbottom::after {
+    @apply absolute bottom-full left-[50%] -ml-1 border-t-transparent border-l-transparent border-b-black border-r-transparent;
+}
+
+.tooltip.tright {
+    @apply left-[150%] -right-[67px] -mb-[15px] -top-[125%];
+}
+
+.tooltip.tright::after {
+    @apply absolute right-full top-[42%] -ml-1 border-t-transparent border-l-transparent border-b-transparent border-r-black;
+}
+
+.tooltip.tleft {
+    @apply -left-[156px] -mb-[15px] -top-[125%];
+}
+
+.tooltip.tleft::after {
+    @apply absolute left-full top-[42%] -mr-1 border-t-transparent border-l-black border-b-transparent border-r-transparent;
+}
