@@ -10,14 +10,10 @@
         </label>
         <div class="flex group">
             @if ($toolTip)
-            <x-wireblade-tooltip :position="$toolTipPosition">
+            <x-wb::tooltip :position="$toolTipPosition">
                 {{ $toolTip }}
-            </x-wireblade-tooltip>
+            </x-wb::tooltip>
             @endif
-            <div class="invisible group-hover:visible absolute top-0 ltr:right-0 ltr:left-0 z-10 space-y-1 bg-slate-900 dark:bg-slate-800 text-slate-300 text-sm rounded px-4 py-2 w-full max-w-xs shadow-md border dark:border-slate-700 cursor-pointer"
-                role="tooltip" aria-hidden="true">
-                Hello World
-            </div>
         </div>
     </div>
     <textarea id="{{ str_slug($label) }}" {{ $attributes->except(['class']) }}

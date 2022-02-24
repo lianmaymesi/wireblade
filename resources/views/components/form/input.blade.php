@@ -5,9 +5,10 @@
         ])>
         @if ($label)
         <div @class([ 'flex items-center justify-between'
-            , 'ltr:-mr-[1px] rtl:-ml-[1px] border-gray-300 bg-gray-100 transition duration-75 shadow-sm p-2 ltr:border-l rtl:border-r border-t border-b text-gray-500 ltr:rounded-l-md rtl:rounded-r-md dark:bg-slate-800'=>
+            , 'ltr:-mr-[1px] rtl:-ml-[1px] border-gray-300 dark:border-slate-700 bg-gray-100 transition duration-75 shadow-sm p-2 ltr:border-l rtl:border-r border-t border-b text-gray-500 ltr:rounded-l-md rtl:rounded-r-md dark:bg-slate-800'=>
             $prefixLabel,
-            'ltr:-ml-[1px] rtl:-mr-[1px] border-gray-300 bg-gray-100 transition duration-75 shadow-sm p-2 border-r
+            'ltr:-ml-[1px] rtl:-mr-[1px] border-gray-300 dark:border-slate-700 bg-gray-100 transition duration-75
+            shadow-sm p-2 border-r
             border-t border-b ltr:rounded-r-md rtl:rounded-l-md dark:bg-slate-800' => $suffixLabel,
             'bg-red-200 text-red-900 border-red-400' => $error
             ])

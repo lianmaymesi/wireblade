@@ -3,26 +3,29 @@
 namespace Lianmaymesi\Wireblade;
 
 use Illuminate\Support\Facades\Blade;
-use Illuminate\View\Compilers\BladeCompiler;
-use Lianmaymesi\Wireblade\Commands\WirebladeCommand;
+use Spatie\LaravelPackageTools\Package;
 use Lianmaymesi\Wireblade\Components\Form;
-use Lianmaymesi\Wireblade\Components\Form\Input;
-use Lianmaymesi\Wireblade\Components\Form\Textarea;
+use Illuminate\View\Compilers\BladeCompiler;
+use Lianmaymesi\Wireblade\Components\Icon\X;
+use Lianmaymesi\Wireblade\Components\Tooltip;
+use Lianmaymesi\Wireblade\Components\Icon\Sun;
 use Lianmaymesi\Wireblade\Components\Icon\Bell;
-use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
-use Lianmaymesi\Wireblade\Components\Icon\ChevronDown;
-use Lianmaymesi\Wireblade\Components\Icon\ChevronRight;
 use Lianmaymesi\Wireblade\Components\Icon\Menu;
 use Lianmaymesi\Wireblade\Components\Icon\Moon;
-use Lianmaymesi\Wireblade\Components\Icon\Sun;
-use Lianmaymesi\Wireblade\Components\Partials\DropdownLink;
+use Lianmaymesi\Wireblade\Components\Form\Input;
+use Lianmaymesi\Wireblade\Components\Form\Textarea;
+use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
+use Lianmaymesi\Wireblade\Commands\WirebladeCommand;
+use Lianmaymesi\Wireblade\Components\Icon\ChevronDown;
 use Lianmaymesi\Wireblade\Components\Partials\NavHelp;
-use Lianmaymesi\Wireblade\Components\Partials\Navigation;
 use Lianmaymesi\Wireblade\Components\Partials\NavItem;
 use Lianmaymesi\Wireblade\Components\Partials\NavLink;
-use Lianmaymesi\Wireblade\Components\Tooltip;
-use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Lianmaymesi\Wireblade\Components\Icon\ChevronRight;
+use Lianmaymesi\Wireblade\Components\Layouts\AppLayout;
+use Lianmaymesi\Wireblade\Components\Layouts\AuthLayout;
+use Lianmaymesi\Wireblade\Components\Partials\Navigation;
+use Lianmaymesi\Wireblade\Components\Partials\DropdownLink;
 
 class WirebladeServiceProvider extends PackageServiceProvider
 {
@@ -54,6 +57,10 @@ class WirebladeServiceProvider extends PackageServiceProvider
         Blade::directive('wbstyles', function () {
             return \Lianmaymesi\Wireblade\Wireblade::css();
         });
+
+        Blade::directive('wbscripts', function () {
+            return \Lianmaymesi\Wireblade\Wireblade::js();
+        });
     }
 
     protected function registerComponent(string $component, $class)
@@ -64,6 +71,11 @@ class WirebladeServiceProvider extends PackageServiceProvider
     protected function configureComponents()
     {
         $this->callAfterResolving(BladeCompiler::class, function () {
+
+            // Layouts
+            $this->registerComponent('app', AppLayout::class);
+            $this->registerComponent('auth', AuthLayout::class);
+
             // Forms
             $this->registerComponent('form', Form::class);
             $this->registerComponent('input', Input::class);
@@ -77,6 +89,7 @@ class WirebladeServiceProvider extends PackageServiceProvider
             $this->registerComponent('icons.moon', Moon::class);
             $this->registerComponent('icons.chevron-right', ChevronRight::class);
             $this->registerComponent('icons.chevron-down', ChevronDown::class);
+            $this->registerComponent('icons.x', X::class);
 
             // UI
             $this->registerComponent('tooltip', Tooltip::class);
@@ -85,7 +98,6 @@ class WirebladeServiceProvider extends PackageServiceProvider
             $this->registerComponent('navigation', Navigation::class);
             $this->registerComponent('nav-item', NavItem::class);
             $this->registerComponent('nav-help', NavHelp::class);
-            $this->registerComponent('nav-link', NavLink::class);
             $this->registerComponent('dropdown-link', DropdownLink::class);
         });
     }
