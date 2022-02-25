@@ -2,6 +2,6 @@
 
 All notable changes to `wireblade` will be documented in this file.
 
-## 1.0.0 - 202X-XX-XX
+## 0.0.1 - 2022-02-26
 
-- initial release
+-   Initial experimental release

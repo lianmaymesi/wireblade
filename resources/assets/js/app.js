@@ -1,10 +1,13 @@
 import Alpine from "alpinejs";
+import collapse from "@alpinejs/collapse";
 
-const breakpoint = 1280;
+Alpine.plugin(collapse);
+
+const breakpoint = 1024;
 
 document.addEventListener("alpine:init", () => {
     Alpine.data("sidebar", () => ({
-        active: "dashboard",
+        notification: false,
         open: {
             above: true,
             below: false,
@@ -16,7 +19,6 @@ document.addEventListener("alpine:init", () => {
         },
 
         isOpen() {
-            console.log(this.isAboveBreakpoint);
             if (this.isAboveBreakpoint) {
                 return this.open.above;
             }
@@ -28,6 +30,7 @@ document.addEventListener("alpine:init", () => {
             }
             this.open.below = true;
         },
+
         handleClose() {
             if (this.isAboveBreakpoint) {
                 this.open.above = false;
@@ -53,16 +56,6 @@ document.addEventListener("alpine:init", () => {
             this.open = false;
         },
     }));
-
-    // Alpine.data("themeSwitcher", () => ({
-    //     darkMode: false,
-
-    //     init() {},
-
-    //     toggle() {
-    //         this.darkMode = !this.darkMode;
-    //     },
-    // }));
 });
 
 window.Alpine = Alpine;

@@ -21,17 +21,25 @@
                 <span>{{ $title }}</span>
             </div>
 
-            <div class="ltr:ml-auto rtl:mr-auto" x-show="tab != '{{ str_slug($title) }}'">
-                <x-wb::icons.chevron-right class="w-4 h-4 text-slate-300" />
-            </div>
-            <div class="ltr:ml-auto rtl:mr-auto" x-show="tab === '{{ str_slug($title) }}'">
-                <x-wb::icons.chevron-down class="w-4 h-4 text-slate-300" />
+            <div class="ltr:ml-auto rtl:mr-auto">
+                <div x-show="tab != '{{ str_slug($title) }}'">
+                    <x-wb::icons.chevron-right class="w-4 h-4 text-slate-300" />
+                </div>
+                <div x-show="tab === '{{ str_slug($title) }}'">
+                    <x-wb::icons.chevron-down class="w-4 h-4 text-slate-300" />
+                </div>
             </div>
         </a>
         @endif
     </div>
     @if($submenu)
-    <div class="overflow-hidden mt-1" x-show="tab === '{{ str_slug($title) }}'" x-transition.origin.top.bottom>
+    <div x-show="tab === '{{ str_slug($title) }}'" x-transition:enter="transition ease-in-out duration-300"
+        x-transition:enter-start="transform scale-y-0 -translate-y-1/2"
+        x-transition:enter-end="h-full transform scale-y-100 translate-y-0"
+        x-transition:leave="transition ease-in-out duration-300"
+        x-transition:leave-start="h-full transform scale-y-100 translate-y-0"
+        x-transition:leave-end="transform scale-y-0 -translate-y-1/2" class="overflow-hidden mt-1"
+        style="display: none;">
         {{ $submenu }}
     </div>
     @endif

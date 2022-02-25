@@ -3,28 +3,27 @@
 namespace Lianmaymesi\Wireblade;
 
 use Illuminate\Support\Facades\Blade;
-use Illuminate\View\Compilers\BladeCompiler;
-use Lianmaymesi\Wireblade\Commands\WirebladeCommand;
+use Spatie\LaravelPackageTools\Package;
 use Lianmaymesi\Wireblade\Components\Form;
-use Lianmaymesi\Wireblade\Components\Form\Input;
-use Lianmaymesi\Wireblade\Components\Form\Textarea;
+use Illuminate\View\Compilers\BladeCompiler;
+use Lianmaymesi\Wireblade\Components\Icon\X;
+use Lianmaymesi\Wireblade\Components\Tooltip;
+use Lianmaymesi\Wireblade\Components\Icon\Sun;
 use Lianmaymesi\Wireblade\Components\Icon\Bell;
-use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
-use Lianmaymesi\Wireblade\Components\Icon\ChevronDown;
-use Lianmaymesi\Wireblade\Components\Icon\ChevronRight;
 use Lianmaymesi\Wireblade\Components\Icon\Menu;
 use Lianmaymesi\Wireblade\Components\Icon\Moon;
-use Lianmaymesi\Wireblade\Components\Icon\Sun;
-use Lianmaymesi\Wireblade\Components\Icon\X;
+use Lianmaymesi\Wireblade\Components\Form\Input;
+use Lianmaymesi\Wireblade\Components\Form\Textarea;
+use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
+use Lianmaymesi\Wireblade\Components\Icon\ChevronDown;
+use Lianmaymesi\Wireblade\Components\Partials\NavHelp;
+use Lianmaymesi\Wireblade\Components\Partials\NavItem;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Lianmaymesi\Wireblade\Components\Icon\ChevronRight;
 use Lianmaymesi\Wireblade\Components\Layouts\AppLayout;
 use Lianmaymesi\Wireblade\Components\Layouts\AuthLayout;
-use Lianmaymesi\Wireblade\Components\Partials\DropdownLink;
-use Lianmaymesi\Wireblade\Components\Partials\NavHelp;
 use Lianmaymesi\Wireblade\Components\Partials\Navigation;
-use Lianmaymesi\Wireblade\Components\Partials\NavItem;
-use Lianmaymesi\Wireblade\Components\Tooltip;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Lianmaymesi\Wireblade\Components\Partials\DropdownLink;
 
 class WirebladeServiceProvider extends PackageServiceProvider
 {
@@ -33,9 +32,7 @@ class WirebladeServiceProvider extends PackageServiceProvider
         $package
             ->name('wireblade')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_wireblade_table')
-            ->hasCommand(WirebladeCommand::class);
+            ->hasViews();
     }
 
     public function packageBooted()
@@ -89,11 +86,14 @@ class WirebladeServiceProvider extends PackageServiceProvider
             $this->registerComponent('icons.chevron-right', ChevronRight::class);
             $this->registerComponent('icons.chevron-down', ChevronDown::class);
             $this->registerComponent('icons.x', X::class);
+            $this->registerComponent('icons.cog', Cog::class);
 
             // UI
             $this->registerComponent('tooltip', Tooltip::class);
 
             // Partials
+            $this->registerComponent('notification-item', NotificationItem::class);
+            $this->registerComponent('profile', Profile::class);
             $this->registerComponent('navigation', Navigation::class);
             $this->registerComponent('nav-item', NavItem::class);
             $this->registerComponent('nav-help', NavHelp::class);
