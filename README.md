@@ -5,6 +5,8 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/lianmaymesi/wireblade/Check%20&%20fix%20styling?label=code%20style)](https://github.com/lianmaymesi/wireblade/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/lianmaymesi/wireblade.svg?style=flat-square)](https://packagist.org/packages/lianmaymesi/wireblade)
 
+![WireBlade](https://github.com/lianmaymesi/wireblade/blob/main/public/assets/images/v000001.jpg?raw=true)
+
 WireBlade is a collection of components like forms, icons, layouts which are built by using Tailwind CSS and AlpineJS. The main purpose of this package is using for my projects. If you like this package, give it a try and send your feedback. Please be kind to me, I don't have much experiences, I am just trying myself by watching & learning tutorials. Thanks to all.
 
 ## Installation
