@@ -33,7 +33,7 @@ php artisan vendor:publish --tag="wireblade-components"
 
 If you're not publishing views or components & its classes, please follow the usage.
 
-## WireBlade Layouts
+## WireBlade Layouts - App Layout
 
 You can extend the `app layout` by creating `resources\views\layouts\app.blade.php` and copy the below code and update the content
 
@@ -86,6 +86,23 @@ You can extend the `app layout` by creating `resources\views\layouts\app.blade.p
     <!---It will yield your content throught this slot -->
     <x-slot name="content"> {{ $slot }} </x-slot>
 </x-wb::app>
+```
+
+## WireBlade Layouts - Auth Layout
+
+You can extend the `auth layout` by creating `resources\views\layouts\app.blade.php` and copy the below code and update the content
+
+```html
+<x-wb::auth title="Login" show-graphics>
+    <x-slot name="page_content"> Show your Login / Register / Forgot Password Page Content </x-slot>
+
+    <x-wb::auth-layout-content
+        title="Graphic Section Title"
+        content="This is Login page for the website and it works nice so far."
+        cta="/"
+        cta_text="Know More"
+    />
+</x-wb::auth>
 ```
 
 ## Directives for styles & scripts
