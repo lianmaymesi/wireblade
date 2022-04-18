@@ -18,6 +18,7 @@ use Lianmaymesi\Wireblade\Components\Icon\Sun;
 use Lianmaymesi\Wireblade\Components\Icon\X;
 use Lianmaymesi\Wireblade\Components\Layouts\AppLayout;
 use Lianmaymesi\Wireblade\Components\Layouts\AuthLayout;
+use Lianmaymesi\Wireblade\Components\Partials\AuthLayoutContent;
 use Lianmaymesi\Wireblade\Components\Partials\DropdownLink;
 use Lianmaymesi\Wireblade\Components\Partials\NavHelp;
 use Lianmaymesi\Wireblade\Components\Partials\Navigation;
@@ -101,6 +102,7 @@ class WirebladeServiceProvider extends PackageServiceProvider
             $this->registerComponent('nav-item', NavItem::class);
             $this->registerComponent('nav-help', NavHelp::class);
             $this->registerComponent('dropdown-link', DropdownLink::class);
+            $this->registerComponent('auth-layout-content', AuthLayoutContent::class);
         });
     }
 }

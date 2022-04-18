@@ -6,9 +6,15 @@ use Illuminate\View\Component;
 
 class AuthLayout extends Component
 {
-    public function __construct()
+    public $title;
+
+    public $showGraphics;
+
+    public function __construct($title = '', $showGraphics = '')
     {
-        //
+        $this->title = $title;
+
+        $this->showGraphics = $showGraphics;
     }
 
     public function render()

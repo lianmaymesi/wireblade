@@ -87,7 +87,7 @@
                             &verbar;
                         </div>
                         <div class="hidden lg:block text-lg font-semibold">
-                            Dashboard
+                            {{ $title }}
                         </div>
                     </div>
                     <div class="ltr:ml-auto rtl:mr-auto">
