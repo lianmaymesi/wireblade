@@ -12,15 +12,17 @@ class NavItem extends Component
 
     public $route;
 
-    public function __construct($dropdown = '', $title, $route = '')
-    {
-        $this->submenu = $submenu;
+    public $submenu;
 
+    public function __construct($title, $route = '', $submenu = '', $dropdown = '')
+    {
         $this->dropdown = $dropdown;
 
         $this->title = $title;
 
         $this->route = $route;
+
+        $this->submenu = $submenu;
     }
 
     public function render()
