@@ -10,7 +10,8 @@
             'ltr:-ml-[1px] rtl:-mr-[1px] border-gray-300 dark:border-slate-700 bg-gray-100 transition duration-75
             shadow-sm p-2 border-r
             border-t border-b ltr:rounded-r-md rtl:rounded-l-md dark:bg-slate-800' => $suffixLabel,
-            'bg-red-200 text-red-900 border-red-400' => $error
+            'text-red-900 border-red-400' => $error,
+            'bg-red-200' => ($error && $suffixLabel) || ($error && $prefixLabel)
             ])
             >
             <label class="inline-flex items-center" for="{{ str_slug($label) }}">
@@ -18,8 +19,10 @@
                 {{ $icon ?? '' }}
                 @endif
                 <span class="text-sm font-medium flex items-center ltr:ml-1 rtl:mr-1">
-                    {{ $label }} @if($mandatory)
-                    <b class="text-xl leading-none font-medium text-red-700 ltr:ml-1 rtl:mr-1">*</b>@endif
+                    {{ $label }}
+                    @if($mandatory)
+                    <b class="text-xl leading-none font-medium text-red-700 ltr:ml-1 rtl:mr-1">*</b>
+                    @endif
                 </span>
             </label>
             @if ($toolTip)
