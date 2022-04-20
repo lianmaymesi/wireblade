@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div
-                    class="relative flex items-top sm:items-center py-2 md:py-4 px-4 z-[199] w-full bg-slate-100 dark:bg-slate-600">
+                    class="relative flex items-top sm:items-center py-2 md:py-4 px-4 z-[199] w-full bg-gray-50 dark:bg-slate-800">
                     {{ $content }}
                 </div>
                 <div
