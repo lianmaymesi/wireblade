@@ -173,6 +173,13 @@ You can use forms, currently limited for testing purposes.
         facilis itaque temporibus, quaerat quod provident. Quam, necessitatibus porro.
     </x-slot>
 </x-wb::textarea>
+
+<x-wb::select label="Email">
+    <option value="1">1</option>
+    <option value="1">1</option>
+    <option value="1">1</option>
+    <option value="1">1</option>
+</x-wb::select>
 ```
 
 ## Testing

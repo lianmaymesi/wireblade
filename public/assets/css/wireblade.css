@@ -836,6 +836,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+.pl-10 {
+  padding-left: 2.5rem;
+}
+.pr-10 {
+  padding-right: 2.5rem;
+}
+.pl-3 {
+  padding-left: 0.75rem;
+}
 .align-middle {
   vertical-align: middle;
 }
@@ -1257,6 +1266,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 2rem;
 }
 
+[dir="ltr"] .ltr\:pr-10 {
+  padding-right: 2.5rem;
+}
+
+[dir="ltr"] .ltr\:pl-3 {
+  padding-left: 0.75rem;
+}
+
 [dir="rtl"] .rtl\:right-0 {
   right: 0px;
 }
@@ -1325,6 +1342,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 [dir="rtl"] .rtl\:pr-8 {
   padding-right: 2rem;
+}
+
+[dir="rtl"] .rtl\:pl-10 {
+  padding-left: 2.5rem;
+}
+
+[dir="rtl"] .rtl\:pr-3 {
+  padding-right: 0.75rem;
 }
 
 .dark .dark\:border-slate-700 {
