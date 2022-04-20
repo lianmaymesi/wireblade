@@ -13,7 +13,7 @@
         "@shufo/prettier-plugin-blade": "^1.0.11",
         "autoprefixer": "^10.4.2",
         "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0.43",
         "lodash": "^4.17.19",
         "postcss": "^8.4.5",
         "prettier": "^2.5.1",
