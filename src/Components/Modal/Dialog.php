@@ -6,7 +6,8 @@ use Illuminate\View\Component;
 
 class Dialog extends Component
 {
-    public $id, $maxWidth;
+    public $id;
+    public $maxWidth;
 
     public function __construct($id = '', $maxWidth = '')
     {

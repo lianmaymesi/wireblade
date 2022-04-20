@@ -3,13 +3,10 @@
 namespace Lianmaymesi\Wireblade;
 
 use Illuminate\Support\Facades\Blade;
-use Spatie\LaravelPackageTools\Package;
-use Lianmaymesi\Wireblade\Components\Form;
-use Lianmaymesi\Wireblade\Components\Modal;
 use Illuminate\View\Compilers\BladeCompiler;
+use Lianmaymesi\Wireblade\Components\Form;
 use Lianmaymesi\Wireblade\Components\Form\Input;
 use Lianmaymesi\Wireblade\Components\Form\Select;
-use Lianmaymesi\Wireblade\Components\Modal\Dialog;
 use Lianmaymesi\Wireblade\Components\Form\Textarea;
 use Lianmaymesi\Wireblade\Components\Icon\Bell;
 use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
@@ -22,6 +19,8 @@ use Lianmaymesi\Wireblade\Components\Icon\Sun;
 use Lianmaymesi\Wireblade\Components\Icon\X;
 use Lianmaymesi\Wireblade\Components\Layouts\AppLayout;
 use Lianmaymesi\Wireblade\Components\Layouts\AuthLayout;
+use Lianmaymesi\Wireblade\Components\Modal;
+use Lianmaymesi\Wireblade\Components\Modal\Dialog;
 use Lianmaymesi\Wireblade\Components\Partials\AuthLayoutContent;
 use Lianmaymesi\Wireblade\Components\Partials\DropdownLink;
 use Lianmaymesi\Wireblade\Components\Partials\NavHelp;
@@ -30,6 +29,7 @@ use Lianmaymesi\Wireblade\Components\Partials\NavItem;
 use Lianmaymesi\Wireblade\Components\Partials\NotificationItem;
 use Lianmaymesi\Wireblade\Components\Partials\Profile;
 use Lianmaymesi\Wireblade\Components\Tooltip;
+use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class WirebladeServiceProvider extends PackageServiceProvider
