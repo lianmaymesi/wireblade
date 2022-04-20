@@ -2,6 +2,18 @@
 
 All notable changes to `wireblade` will be documented in this file.
 
+## Added Select tag - 2022-04-20
+
+-   Added `Select` html tag
+
+```html
+<x-wb::select label="Colors">
+    <option value="Red">Red</option>
+    <option></option>
+    <option></option>
+</x-wb::select>
+```
+
 ## Fixed Minor issues - 2022-04-18
 
 This package has some missed classes and it has been fixed in this release.
@@ -10,8 +22,9 @@ This package has some missed classes and it has been fixed in this release.
 
 -   Added `App` layout
 -   Added couple of form fields
-    1. `input` with the following types `text` `email` `number` `date` `datetime-local` `password` `month` `search` `time` `url` `week` `tel`
-    2. `textarea`
+-   1. `input` with the following types `text` `email` `number` `date` `datetime-local` `password` `month` `search` `time` `url` `week` `tel`
+-   2. `textarea`
+-
 -   Dark Mode
 -   Sidebar & Notification drawer
 
