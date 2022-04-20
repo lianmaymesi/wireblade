@@ -5,6 +5,7 @@ namespace Lianmaymesi\Wireblade;
 use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
 use Lianmaymesi\Wireblade\Components\Form;
+use Lianmaymesi\Wireblade\Components\Modal;
 use Illuminate\View\Compilers\BladeCompiler;
 use Lianmaymesi\Wireblade\Components\Icon\X;
 use Lianmaymesi\Wireblade\Components\Tooltip;
@@ -15,6 +16,7 @@ use Lianmaymesi\Wireblade\Components\Icon\Menu;
 use Lianmaymesi\Wireblade\Components\Icon\Moon;
 use Lianmaymesi\Wireblade\Components\Form\Input;
 use Lianmaymesi\Wireblade\Components\Form\Select;
+use Lianmaymesi\Wireblade\Components\Modal\Dialog;
 use Lianmaymesi\Wireblade\Components\Form\Textarea;
 use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
 use Lianmaymesi\Wireblade\Components\Icon\ChevronDown;
@@ -96,6 +98,8 @@ class WirebladeServiceProvider extends PackageServiceProvider
 
             // UI
             $this->registerComponent('tooltip', Tooltip::class);
+            $this->registerComponent('modal', Modal::class);
+            $this->registerComponent('dialog', Dialog::class);
 
             // Partials
             $this->registerComponent('notification-item', NotificationItem::class);

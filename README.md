@@ -129,6 +129,28 @@ x-data="sidebar"
 @resize.window="handleResize"
 ```
 
+## Modal
+
+You can use modal component which is same as available in Jetstream Laravel.
+
+```php
+<x-wb::dialog wire:model="showModal">
+
+    <x-slot name="title">
+        // Title goes here
+    </x-slot>
+
+    <x-slot name="content">
+        // Content goes here
+    </x-slot>
+
+    <x-slot name="footer">
+        // Footer goes here
+    </x-slot>
+
+</x-wb::dialog>
+```
+
 ## Form Fields
 
 You can use forms, currently limited for testing purposes.

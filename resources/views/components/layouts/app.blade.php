@@ -86,7 +86,7 @@
                         <div class="px-4 text-gray-700/40" x-show="!isOpen()">
                             &verbar;
                         </div>
-                        <div class="hidden lg:block text-lg font-semibold">
+                        <div class="text-base lg:text-lg font-semibold">
                             {{ $title }}
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div
-                    class="relative flex items-top sm:items-center py-2 md:py-4 px-4 z-[199] w-full bg-gray-50 dark:bg-slate-800">
+                    class="relative flex items-top sm:items-center py-2 md:py-4 px-4 w-full bg-gray-50 dark:bg-slate-800">
                     {{ $content }}
                 </div>
                 <div
