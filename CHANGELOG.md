@@ -2,26 +2,39 @@
 
 All notable changes to `wireblade` will be documented in this file.
 
+## Added Select tag - 2022-04-20
+
+- Added `Select` html tag
+
+```html
+<x-wb::select label="Colors">
+    <option value="Red">Red</option>
+    <option></option>
+    <option></option>
+</x-wb::select>
+
+```
 ## Fixed Minor issues - 2022-04-18
 
 This package has some missed classes and it has been fixed in this release.
 
 ## 0.0.1 - 2022-02-26
 
--   Added `App` layout
--   Added couple of form fields
-    1. `input` with the following types `text` `email` `number` `date` `datetime-local` `password` `month` `search` `time` `url` `week` `tel`
-    2. `textarea`
--   Dark Mode
--   Sidebar & Notification drawer
+- Added `App` layout
+- Added couple of form fields
+- 1. `input` with the following types `text` `email` `number` `date` `datetime-local` `password` `month` `search` `time` `url` `week` `tel`
+- 2. `textarea`
+- 
+- Dark Mode
+- Sidebar & Notification drawer
 
 ## 0.0.2 - 2022-02-26
 
--   Fixed missing `Cog` icon class in service provider
+- Fixed missing `Cog` icon class in service provider
 
 ## 1.0.0 - 2022-02-26
 
--   Supports `Laravel 9`
+- Supports `Laravel 9`
 
 ## Fixed Minor issues - 2022-04-18
 
@@ -29,7 +42,7 @@ This package has some missed classes and it has been fixed in this release.
 
 ## Fixed Minor issues - 2022-04-18
 
-_dropdown_ properties are not required for **x-wb::nav-item** component.
+*dropdown* properties are not required for **x-wb::nav-item** component.
 
 ## v1.1.0 Added Auth Layouts - 2022-04-18
 
@@ -45,7 +58,7 @@ Added Auth Layouts
 
 ## v1.2.0 Added Select tag - 2022-04-20
 
--   Added `Select` html tag
+- Added `Select` html tag
 
 ```html
 <x-wb::select label="Colors">
@@ -53,4 +66,5 @@ Added Auth Layouts
     <option></option>
     <option></option>
 </x-wb::select>
+
 ```
