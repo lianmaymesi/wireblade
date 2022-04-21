@@ -127,6 +127,27 @@ Add the below code inside your `<body>` tag
 ```js
 x-data="sidebar"
 @resize.window="handleResize"
+
+```
+
+## Table
+
+You can use table component.
+
+```php
+<x-wb::table>
+    <x-slot name="head">
+        <x-wb::row>
+            <x-wb::heading>Name</x-wb::heading>
+        </x-wb::row>
+    </x-slot>
+
+    <x-slot name="body">
+        <x-wb::row>
+            <x-wb::cell>John Doe</x-wb::cell>
+        </x-wb::row>
+    </x-slot>
+</x-wb::table>
 ```
 
 ## Modal

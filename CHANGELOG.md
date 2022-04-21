@@ -71,3 +71,8 @@ Added Auth Layouts
 ## v1.3.0 Added Modal & Dialog component - 2022-04-20
 
 -   Added `<x-wb::dialog></x-wb::dialog>` component which is same as available in Laravel Jetstream
+
+## v1.4.0 Added Table component - 2022-04-21
+
+-   Added `<x-wb::table></x-wb::table>` component
+-   Including the slot components `<x-wb::heading></x-wb::heading>` , `<x-wb::row></x-wb::row>` , `<x-wb::cell></x-wb::cell>`
