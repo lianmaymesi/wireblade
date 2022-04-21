@@ -130,6 +130,24 @@ x-data="sidebar"
 
 ```
 
+## Flash Notification
+
+Add this component on your `app` layout
+
+```php
+<x-wb::notification />
+```
+
+For triggering this notification in livewire
+
+```php
+public function store() {
+    ...
+    ...
+    $this->dispacthBrowserEvent('notify', 'Ah! It\'s Working');
+}
+```
+
 ## Table
 
 You can use table component.
@@ -190,6 +208,8 @@ You can use forms, currently limited for testing purposes.
 <x-wb::input label="Password" type="password" placeholder="Password" />
 
 <x-wb::input label="Month" type="month" />
+
+<x-wb::form label="Product Images" />
 
 <x-wb::input label="Search" type="search" placeholder="Search" />
 

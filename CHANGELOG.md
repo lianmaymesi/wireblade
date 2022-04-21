@@ -76,3 +76,8 @@ Added Auth Layouts
 
 -   Added `<x-wb::table></x-wb::table>` component
 -   Including the slot components `<x-wb::heading></x-wb::heading>` , `<x-wb::row></x-wb::row>` , `<x-wb::cell></x-wb::cell>`
+
+## v1.5.0 Added File input & Flash Notification component - 2022-04-21
+
+-   Added `<x-wb::file></x-wb::file>` component
+-   Added `<x-wb::notification></x-wb::notification>` component
