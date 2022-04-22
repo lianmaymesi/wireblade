@@ -86,3 +86,5 @@ Added Auth Layouts
 
 -   Added `active` property for the `navigation-item` & `dropdown-link`
 -   Added `title` & `main-menu` property for the `app` layout
+
+## v1.6.1 Fixed overflow issues while using table component - 2022-04-22
