@@ -90,3 +90,8 @@ Added Auth Layouts
 ## v1.6.1 Fixed overflow issues while using table component - 2022-04-22
 
 ## v1.6.2 Fixed overflow issues while using table component - 2022-04-22
+
+## v1.7.0 Added no-help property for nav-item component - 2022-04-22
+
+-   Added `no-help` property for <x-wb::nav-item></x-wb::nav-item> . It disables Help Text from the menu items.
+-   Adjusts some spaces on menus

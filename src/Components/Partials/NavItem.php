@@ -16,7 +16,9 @@ class NavItem extends Component
 
     public $active;
 
-    public function __construct($title, $route = '', $submenu = '', $dropdown = '', $active = '')
+    public $noHelp;
+
+    public function __construct($title, $route = '', $submenu = '', $dropdown = '', $active = '', $noHelp = '')
     {
         $this->dropdown = $dropdown;
 
@@ -27,6 +29,8 @@ class NavItem extends Component
         $this->submenu = $submenu;
 
         $this->active = $active;
+
+        $this->noHelp = $noHelp;
     }
 
     public function render()

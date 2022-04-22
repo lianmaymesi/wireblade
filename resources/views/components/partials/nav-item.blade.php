@@ -1,5 +1,7 @@
-<div class="flex flex-col basis-auto grow shrink-0 select-none">
+<div @class(['flex flex-col basis-auto grow shrink-0 select-none first:mt-0', 'mt-4'=> !$noHelp, 'mt-2' => $noHelp])>
+    @if(!$noHelp)
     {{ $slot }}
+    @endif
     <div class="my-0 mx-3">
         @if ($dropdown)
         <a @click.prevent="toggle('{{ str_slug($title) }}')"

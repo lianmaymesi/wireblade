@@ -11,7 +11,7 @@
         this.activeMenu = '';
     }
 }">
-    <div class="flex-auto overflow-y-auto touch-auto relative space-y-4">
+    <div class="flex-auto overflow-y-auto touch-auto relative">
         {{ $slot }}
     </div>
 </nav>
