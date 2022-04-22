@@ -1,6 +1,6 @@
 const mix = require("laravel-mix");
 const tailwindcss = require("tailwindcss");
-const tailwindcssforms = require("@tailwindcss/forms")
+const tailwindcssforms = require("@tailwindcss/forms");
 
 /*
  |--------------------------------------------------------------------------
@@ -17,4 +17,4 @@ mix.js("resources/assets/js/app.js", "public/assets/js/wireblade.js").postCss(
     "resources/assets/css/app.css",
     "public/assets/css/wireblade.css",
     [tailwindcss, tailwindcssforms]
-).version;
+);
