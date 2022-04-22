@@ -247,6 +247,14 @@ You can use forms, currently limited for testing purposes.
 </x-wb::select>
 ```
 
+## Tags Input
+
+It Requires Livewire and you have to add the property in Livewire as `public $meta_key = []`
+
+```php
+<x-wb::tags-input label="Meta Keywords" wire:model.lazy="meta_key" />
+```
+
 ## Testing
 
 ```bash

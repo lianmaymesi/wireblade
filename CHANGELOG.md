@@ -98,4 +98,8 @@ Added Auth Layouts
 
 ## v1.8.0 Added checkbox component - 2022-04-22
 
--   Added new component `<x-wb::checkbox</x-wb::checkbox>`.
+-   Added new component `<x-wb::checkbox</x-wb::checkbox>`
+
+## v1.9.0 Added tags-input component - 2022-04-22
+
+-   Added new component `<x-wb::tags-input</x-wb::tags-input>`

@@ -9,6 +9,7 @@ use Lianmaymesi\Wireblade\Components\Form\Checkbox;
 use Lianmaymesi\Wireblade\Components\Form\FileInput;
 use Lianmaymesi\Wireblade\Components\Form\Input;
 use Lianmaymesi\Wireblade\Components\Form\Select;
+use Lianmaymesi\Wireblade\Components\Form\TagsInput;
 use Lianmaymesi\Wireblade\Components\Form\Textarea;
 use Lianmaymesi\Wireblade\Components\Icon\Bell;
 use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
@@ -93,6 +94,7 @@ class WirebladeServiceProvider extends PackageServiceProvider
             $this->registerComponent('select', Select::class);
             $this->registerComponent('file', FileInput::class);
             $this->registerComponent('checkbox', Checkbox::class);
+            $this->registerComponent('tags-input', TagsInput::class);
 
             // Icons
             $this->registerComponent('icons.chart-pie', ChartPie::class);
