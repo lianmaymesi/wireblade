@@ -6,7 +6,9 @@ use Illuminate\View\Component;
 
 class AppLayout extends Component
 {
-    public $title, $mainMenu, $subMenu;
+    public $title;
+    public $mainMenu;
+    public $subMenu;
 
     public function __construct($title = '', $mainMenu = '', $subMenu = '')
     {

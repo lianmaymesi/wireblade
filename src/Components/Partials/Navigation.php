@@ -6,7 +6,8 @@ use Illuminate\View\Component;
 
 class Navigation extends Component
 {
-    public $mainMenu, $subMenu;
+    public $mainMenu;
+    public $subMenu;
 
     public function __construct($mainMenu = '', $subMenu = '')
     {
