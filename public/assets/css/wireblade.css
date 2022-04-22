@@ -613,6 +613,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-lg {
   max-width: 32rem;
 }
+.max-w-full {
+  max-width: 100%;
+}
+.max-w-\[100vh\] {
+  max-width: 100vh;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
