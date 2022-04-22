@@ -88,3 +88,5 @@ Added Auth Layouts
 -   Added `title` & `main-menu` property for the `app` layout
 
 ## v1.6.1 Fixed overflow issues while using table component - 2022-04-22
+
+## v1.6.2 Fixed overflow issues while using table component - 2022-04-22
