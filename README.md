@@ -35,10 +35,10 @@ If you're not publishing views or components & its classes, please follow the us
 
 ## WireBlade Layouts - App Layout
 
-You can extend the `app layout` by creating `resources\views\layouts\app.blade.php` and copy the below code and update the content
+You can extend the `app layout` by creating `resources\views\layouts\app.blade.php` and copy the below code and update the content.
 
 ```html
-<x-wb::app>
+<x-wb::app :title="app()->view->getSections()['title']" :main-menu="app()->view->getSections()['mainMenu']">
     <!---Adding & customize the logo -->
     <x-slot name="logo"> Title </x-slot>
 
@@ -68,7 +68,7 @@ You can extend the `app layout` by creating `resources\views\layouts\app.blade.p
     <!---Sidebar Navigations -->
     <x-slot name="navigation">
         <!---Main Menu -->
-        <x-wb::nav-item title="Dashboard" route="">
+        <x-wb::nav-item title="Dashboard" route="" :active="request()->is('/')">
             <x-wb::nav-help title="Dashboard" help-text="Analysis, Summary & Performance" />
         </x-wb::nav-item>
 

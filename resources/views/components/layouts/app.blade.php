@@ -1,4 +1,4 @@
-<div class="flex flex-auto w-full h-full">
+<div class="flex flex-auto w-full h-full" {{ $attributes->except(['class', 'title']) }}>
     <div class="flex flex-auto w-full h-full">
         <div class="relative flex flex-auto">
             <div x-show="isOpen()" x-transition:enter="transition ease-in-out duration-300"
@@ -24,7 +24,7 @@
                             </button>
                         </div>
                     </header>
-                    <x-wb::navigation>
+                    <x-wb::navigation :main-menu="$mainMenu" :sub-menu="$subMenu">
                         {{ $navigation }}
                     </x-wb::navigation>
                     {{ $profile }}

@@ -3566,9 +3566,11 @@ document.addEventListener("alpine:init", function () {
       toggle: function toggle(tab) {
         this.open = !this.open;
         this.tab != tab ? this.tab = tab : this.tab = "";
+        this.activeTitle = tab;
       },
       close: function close() {
         this.open = false;
+        this.activeTitle = "";
       }
     };
   });

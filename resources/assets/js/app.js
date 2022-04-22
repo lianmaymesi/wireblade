@@ -51,9 +51,12 @@ document.addEventListener("alpine:init", () => {
             this.open = !this.open;
 
             this.tab != tab ? (this.tab = tab) : (this.tab = "");
+
+            this.activeTitle = tab;
         },
         close() {
             this.open = false;
+            this.activeTitle = "";
         },
     }));
 });

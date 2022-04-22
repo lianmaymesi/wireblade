@@ -6,11 +6,15 @@ use Illuminate\View\Component;
 
 class AppLayout extends Component
 {
-    public $title;
+    public $title, $mainMenu, $subMenu;
 
-    public function __construct($title = '')
+    public function __construct($title = '', $mainMenu = '', $subMenu = '')
     {
         $this->title = $title;
+
+        $this->mainMenu = $mainMenu;
+
+        $this->subMenu = $subMenu;
     }
 
     public function render()

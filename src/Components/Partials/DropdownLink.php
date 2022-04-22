@@ -10,11 +10,15 @@ class DropdownLink extends Component
 
     public $route;
 
-    public function __construct($title, $route)
+    public $active;
+
+    public function __construct($title, $route, $active = '')
     {
         $this->title = $title;
 
         $this->route = $route;
+
+        $this->active = $active;
     }
 
     public function render()

@@ -81,3 +81,8 @@ Added Auth Layouts
 
 -   Added `<x-wb::file></x-wb::file>` component
 -   Added `<x-wb::notification></x-wb::notification>` component
+
+## v1.6.0 Added active & title for the menus & pages - 2022-04-22
+
+-   Added `active` property for the `navigation-item` & `dropdown-link`
+-   Added `title` & `main-menu` property for the `app` layout
