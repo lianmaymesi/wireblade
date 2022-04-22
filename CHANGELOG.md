@@ -95,3 +95,7 @@ Added Auth Layouts
 
 -   Added `no-help` property for <x-wb::nav-item></x-wb::nav-item> . It disables Help Text from the menu items.
 -   Adjusts some spaces on menus
+
+## v1.7.0 Added checkbox component - 2022-04-22
+
+-   Added new component `<x-wb::checkbox</x-wb::checkbox>`.

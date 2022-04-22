@@ -209,6 +209,8 @@ You can use forms, currently limited for testing purposes.
 
 <x-wb::input label="Month" type="month" />
 
+<x-wb::checkbox label="Are you sure?" />
+
 <x-wb::form label="Product Images" />
 
 <x-wb::input label="Search" type="search" placeholder="Search" />
