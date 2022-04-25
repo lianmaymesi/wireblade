@@ -3,42 +3,43 @@
 namespace Lianmaymesi\Wireblade;
 
 use Illuminate\Support\Facades\Blade;
-use Illuminate\View\Compilers\BladeCompiler;
+use Spatie\LaravelPackageTools\Package;
 use Lianmaymesi\Wireblade\Components\Form;
-use Lianmaymesi\Wireblade\Components\Form\Checkbox;
-use Lianmaymesi\Wireblade\Components\Form\FileInput;
-use Lianmaymesi\Wireblade\Components\Form\Input;
-use Lianmaymesi\Wireblade\Components\Form\Select;
-use Lianmaymesi\Wireblade\Components\Form\TagsInput;
-use Lianmaymesi\Wireblade\Components\Form\Textarea;
-use Lianmaymesi\Wireblade\Components\Icon\Bell;
-use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
-use Lianmaymesi\Wireblade\Components\Icon\ChevronDown;
-use Lianmaymesi\Wireblade\Components\Icon\ChevronRight;
+use Lianmaymesi\Wireblade\Components\Modal;
+use Lianmaymesi\Wireblade\Components\Table;
+use Illuminate\View\Compilers\BladeCompiler;
+use Lianmaymesi\Wireblade\Components\Icon\X;
+use Lianmaymesi\Wireblade\Components\Tooltip;
 use Lianmaymesi\Wireblade\Components\Icon\Cog;
+use Lianmaymesi\Wireblade\Components\Icon\Sun;
+use Lianmaymesi\Wireblade\Components\Form\Trix;
+use Lianmaymesi\Wireblade\Components\Icon\Bell;
 use Lianmaymesi\Wireblade\Components\Icon\Menu;
 use Lianmaymesi\Wireblade\Components\Icon\Moon;
-use Lianmaymesi\Wireblade\Components\Icon\Sun;
-use Lianmaymesi\Wireblade\Components\Icon\X;
-use Lianmaymesi\Wireblade\Components\Layouts\AppLayout;
-use Lianmaymesi\Wireblade\Components\Layouts\AuthLayout;
-use Lianmaymesi\Wireblade\Components\Modal;
+use Lianmaymesi\Wireblade\Components\Table\Row;
+use Lianmaymesi\Wireblade\Components\Form\Input;
+use Lianmaymesi\Wireblade\Components\Table\Cell;
+use Lianmaymesi\Wireblade\Components\Form\Select;
 use Lianmaymesi\Wireblade\Components\Modal\Dialog;
 use Lianmaymesi\Wireblade\Components\Notification;
-use Lianmaymesi\Wireblade\Components\Partials\AuthLayoutContent;
-use Lianmaymesi\Wireblade\Components\Partials\DropdownLink;
-use Lianmaymesi\Wireblade\Components\Partials\NavHelp;
-use Lianmaymesi\Wireblade\Components\Partials\Navigation;
-use Lianmaymesi\Wireblade\Components\Partials\NavItem;
-use Lianmaymesi\Wireblade\Components\Partials\NotificationItem;
-use Lianmaymesi\Wireblade\Components\Partials\Profile;
-use Lianmaymesi\Wireblade\Components\Table;
-use Lianmaymesi\Wireblade\Components\Table\Cell;
+use Lianmaymesi\Wireblade\Components\Form\Checkbox;
+use Lianmaymesi\Wireblade\Components\Form\Textarea;
+use Lianmaymesi\Wireblade\Components\Icon\ChartPie;
 use Lianmaymesi\Wireblade\Components\Table\Heading;
-use Lianmaymesi\Wireblade\Components\Table\Row;
-use Lianmaymesi\Wireblade\Components\Tooltip;
-use Spatie\LaravelPackageTools\Package;
+use Lianmaymesi\Wireblade\Components\Form\FileInput;
+use Lianmaymesi\Wireblade\Components\Form\TagsInput;
+use Lianmaymesi\Wireblade\Components\Icon\ChevronDown;
+use Lianmaymesi\Wireblade\Components\Partials\NavHelp;
+use Lianmaymesi\Wireblade\Components\Partials\NavItem;
+use Lianmaymesi\Wireblade\Components\Partials\Profile;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Lianmaymesi\Wireblade\Components\Icon\ChevronRight;
+use Lianmaymesi\Wireblade\Components\Layouts\AppLayout;
+use Lianmaymesi\Wireblade\Components\Layouts\AuthLayout;
+use Lianmaymesi\Wireblade\Components\Partials\Navigation;
+use Lianmaymesi\Wireblade\Components\Partials\DropdownLink;
+use Lianmaymesi\Wireblade\Components\Partials\NotificationItem;
+use Lianmaymesi\Wireblade\Components\Partials\AuthLayoutContent;
 
 class WirebladeServiceProvider extends PackageServiceProvider
 {
@@ -95,6 +96,7 @@ class WirebladeServiceProvider extends PackageServiceProvider
             $this->registerComponent('file', FileInput::class);
             $this->registerComponent('checkbox', Checkbox::class);
             $this->registerComponent('tags-input', TagsInput::class);
+            $this->registerComponent('trix', Trix::class);
 
             // Icons
             $this->registerComponent('icons.chart-pie', ChartPie::class);

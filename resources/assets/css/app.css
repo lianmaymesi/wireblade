@@ -45,3 +45,7 @@
 .tooltip.tleft::after {
     @apply absolute left-full top-[42%] -mr-1 border-t-transparent border-l-black border-b-transparent border-r-transparent;
 }
+
+[data-trix-button-group="file-tools"] {
+    @apply hidden;
+}

@@ -229,6 +229,8 @@ You can use forms, currently limited for testing purposes.
 
 <x-wb::input label="Week" type="Week" />
 
+<x-wb::trix label="Description" />
+
 <x-wb::input label="Tel" type="tel" laceholder="9x5xxxxx562" />
 
 <x-wb::textarea label="Description" placeholder="Description" rows="10">

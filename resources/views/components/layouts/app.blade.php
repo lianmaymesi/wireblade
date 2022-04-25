@@ -109,7 +109,7 @@
             {{ $content }}
         </div>
         <div
-            :class="{ 'absolute top-0 bottom-0 left-0 right-0 z-[200] opacity-50 bg-black': window.innerWidth < 1024 && isOpen(), 'relative': !isOpen() }">
+            :class="{ 'fixed top-0 bottom-0 left-0 right-0 z-[200] opacity-50 bg-black': window.innerWidth < 1024 && isOpen(), 'relative': !isOpen() }">
         </div>
     </div>
 </div>
