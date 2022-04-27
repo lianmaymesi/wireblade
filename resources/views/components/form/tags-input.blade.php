@@ -81,7 +81,7 @@
             </div>
             <select class="hidden" multiple {{ $attributes }}>
                 <template x-for="(tag, index) in tags">
-                    <option :value="tag" x-text="tag" selected></option>
+                    <option :value="tag" x-text="tag" selected :key="index"></option>
                 </template>
             </select>
         </div>
