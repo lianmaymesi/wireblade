@@ -229,8 +229,6 @@ You can use forms, currently limited for testing purposes.
 
 <x-wb::input label="Week" type="Week" />
 
-<x-wb::trix label="Description" />
-
 <x-wb::input label="Tel" type="tel" laceholder="9x5xxxxx562" />
 
 <x-wb::textarea label="Description" placeholder="Description" rows="10">
@@ -247,6 +245,14 @@ You can use forms, currently limited for testing purposes.
     <option value="1">1</option>
     <option value="1">1</option>
 </x-wb::select>
+```
+
+## Trix Editor
+
+If you are using trix editor you should add `@trixCss` & `@trixJs` directives in below the livewire directives on your home page.
+
+```php
+<x-wb::trix label="Description" id="product" wire:model.defer="description" />
 ```
 
 ## Tags Input

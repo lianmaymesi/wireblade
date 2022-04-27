@@ -107,3 +107,5 @@ Added Auth Layouts
 ## v1.10.0 Added trix component - 2022-04-25
 
 -   Added new component `<x-wb::trix></x-wb::trix>`
+
+## v1.10.1 fixed trix issues - 2022-04-27

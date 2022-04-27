@@ -73,6 +73,14 @@ class WirebladeServiceProvider extends PackageServiceProvider
         Blade::directive('wbscripts', function () {
             return \Lianmaymesi\Wireblade\Wireblade::js();
         });
+
+        Blade::directive('trixCss', function () {
+            return \Lianmaymesi\Wireblade\Wireblade::trixCss();
+        });
+
+        Blade::directive('trixJs', function () {
+            return \Lianmaymesi\Wireblade\Wireblade::trixJs();
+        });
     }
 
     protected function registerComponent(string $component, $class)

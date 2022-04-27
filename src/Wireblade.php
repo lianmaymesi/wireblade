@@ -13,4 +13,14 @@ class Wireblade
     {
         return '<script defer>' . file_get_contents(__DIR__ . './../public/assets/js/wireblade.js') . '</script>';
     }
+
+    public static function trixCss()
+    {
+        return '<link rel="stylesheet" href="https://unpkg.com/trix@2.0.0-alpha.1/dist/trix.css"></link>';
+    }
+
+    public static function trixJs()
+    {
+        return '<script src="https://unpkg.com/trix@2.0.0-alpha.1/dist/trix.umd.js"></script>';
+    }
 }

@@ -6,19 +6,23 @@ use Illuminate\View\Component;
 
 class Trix extends Component
 {
-    public $error;
-
     public $label;
 
     public $mandatory;
 
-    public function __construct($error = '', $label = '', $mandatory = '')
-    {
-        $this->error = $error;
+    public $initialValue;
 
+    public $error;
+
+    public function __construct($label = '', $mandatory = '', $initialValue = '', $error = '')
+    {
         $this->label = $label;
 
         $this->mandatory = $mandatory;
+
+        $this->initialValue = $initialValue;
+
+        $this->error = $error;
     }
 
     public function render()
