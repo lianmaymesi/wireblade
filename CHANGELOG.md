@@ -109,3 +109,7 @@ Added Auth Layouts
 -   Added new component `<x-wb::trix></x-wb::trix>`
 
 ## v1.10.1 fixed trix issues - 2022-04-27
+
+## v1.10.2 Fixed unique key issues in tags-input component - 2022-04-27
+
+-   Unique keys to prevent tampered data issues solved in `tags-input` component
