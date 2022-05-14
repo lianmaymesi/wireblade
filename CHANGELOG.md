@@ -113,3 +113,9 @@ Added Auth Layouts
 ## v1.10.2 Fixed unique key issues in tags-input component - 2022-04-27
 
 -   Unique keys to prevent tampered data issues solved in `tags-input` component
+
+## v1.11.0 enhanced UI and added Anchor Links & Button Links
+
+-   Enhanced little UI
+-   Added <x-wb::links.anchor color="red" link="https:://example.com/">Edit</x-wb::links.anchor> component
+-   Added <x-wb::links.anchor color="blue">Add</x-wb::links.anchor> components

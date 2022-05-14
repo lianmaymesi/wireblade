@@ -255,6 +255,24 @@ If you are using trix editor you should add `@trixCss` & `@trixJs` directives in
 <x-wb::trix label="Description" id="product" wire:model.defer="description" />
 ```
 
+## Links
+
+### Anchor Link
+
+```php
+<x-wb::links.anchor color="red" link="https:://example.com/">
+    Edit
+</x-wb::links.anchor>
+```
+
+### Button Link
+
+```php
+<x-wb::links.anchor color="blue">
+    Add
+</x-wb::links.anchor>
+```
+
 ## Tags Input
 
 It Requires Livewire and you have to add the property in Livewire as `public $meta_key = []`

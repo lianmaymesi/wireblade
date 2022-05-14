@@ -23,6 +23,8 @@ use Lianmaymesi\Wireblade\Components\Icon\Sun;
 use Lianmaymesi\Wireblade\Components\Icon\X;
 use Lianmaymesi\Wireblade\Components\Layouts\AppLayout;
 use Lianmaymesi\Wireblade\Components\Layouts\AuthLayout;
+use Lianmaymesi\Wireblade\Components\Links\AnchorLink;
+use Lianmaymesi\Wireblade\Components\Links\ButtonLink;
 use Lianmaymesi\Wireblade\Components\Modal;
 use Lianmaymesi\Wireblade\Components\Modal\Dialog;
 use Lianmaymesi\Wireblade\Components\Notification;
@@ -105,6 +107,10 @@ class WirebladeServiceProvider extends PackageServiceProvider
             $this->registerComponent('checkbox', Checkbox::class);
             $this->registerComponent('tags-input', TagsInput::class);
             $this->registerComponent('trix', Trix::class);
+
+            // Links
+            $this->registerComponent('links.anchor', AnchorLink::class);
+            $this->registerComponent('links.button', ButtonLink::class);
 
             // Icons
             $this->registerComponent('icons.chart-pie', ChartPie::class);
