@@ -119,3 +119,7 @@ Added Auth Layouts
 -   Enhanced little UI
 -   Added <x-wb::links.anchor color="red" link="https:://example.com/">Edit</x-wb::links.anchor> component
 -   Added <x-wb::links.anchor color="blue">Add</x-wb::links.anchor> components
+
+## v1.12.0 added new property `linkSettings` for profile
+
+-   Added new route property for `linkSettings` in profile tag

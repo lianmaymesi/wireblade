@@ -12,13 +12,17 @@ class Profile extends Component
 
     public $image;
 
-    public function __construct($name, $logout, $image)
+    public $linkSettings;
+
+    public function __construct($name, $logout, $image, $linkSettings = '')
     {
         $this->name = $name;
 
         $this->logout = $logout;
 
         $this->image = $image;
+
+        $this->linkSettings = $linkSettings;
     }
 
     public function render()

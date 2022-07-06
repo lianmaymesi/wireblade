@@ -44,7 +44,12 @@ You can extend the `app layout` by creating `resources\views\layouts\app.blade.p
 
     <!---Updating sidebar footer -->
     <x-slot name="profile">
-        <x-wb::profile name="LiAn DhAs" logout="" image="assets/lian-dhas.jpg" />
+        <x-wb::profile
+            name="LiAn DhAs"
+            logout=""
+            image="assets/lian-dhas.jpg"
+            :linkSettings="route('profile.settings')"
+        />
     </x-slot>
 
     <!---Adding Notification features -->
