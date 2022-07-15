@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </header>
-            <ul class="flex flex-col">
+            <ul class="flex flex-col overflow-y-auto touch-auto">
                 {{ $notification }}
             </ul>
         </div>
