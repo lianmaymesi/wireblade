@@ -131,3 +131,7 @@ Added Auth Layouts
 -   Added new route property for `linkSettings` in profile tag
 
 ## v1.12.1 notification scroll is fixed
+
+## v1.13 Read & Un-Read properties for notification
+
+-   Added `read` property in `Notification` tag

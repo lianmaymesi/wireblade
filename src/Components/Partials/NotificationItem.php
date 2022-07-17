@@ -6,9 +6,11 @@ use Illuminate\View\Component;
 
 class NotificationItem extends Component
 {
-    public function __construct()
+    public $read;
+
+    public function __construct($read)
     {
-        //
+        $this->read = $read;
     }
 
     public function render()

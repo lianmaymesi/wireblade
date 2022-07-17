@@ -54,7 +54,7 @@ You can extend the `app layout` by creating `resources\views\layouts\app.blade.p
 
     <!---Adding Notification features -->
     <x-slot name="notification">
-        <x-wb::notification-item>
+        <x-wb::notification-item :read="$isRead">
             <div class="relative h-11 w-11">
                 <img src="assets/brian-hughes.jpg" class="rounded-full" alt="" />
             </div>
