@@ -137,3 +137,5 @@ Added Auth Layouts
 -   Added `read` property in `Notification` tag
 
 ## v1.13.1 Added attributes in `notification-item` to accept all starts with `wire:`
+
+## v1.13.2 Minor fixes
