@@ -18,11 +18,8 @@ trait HasFileAttachment
 
     public function completeUpload(string $uploadedUrl, string $trixUploadCompletedEvent)
     {
-
         foreach ($this->photos as $photo) {
-
             if ($photo->getFilename() == $uploadedUrl) {
-
                 $newFilename = $photo->store('/', config('wireblade.file_storage_disk'));
 
                 $url = Storage::url($newFilename);

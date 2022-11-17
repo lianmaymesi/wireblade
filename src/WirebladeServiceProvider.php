@@ -93,7 +93,6 @@ class WirebladeServiceProvider extends PackageServiceProvider
     protected function configureComponents()
     {
         $this->callAfterResolving(BladeCompiler::class, function () {
-
             // Layouts
             $this->registerComponent('app', AppLayout::class);
             $this->registerComponent('auth', AuthLayout::class);
