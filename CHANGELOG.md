@@ -128,3 +128,5 @@ Added Auth Layouts
 -   Added `mandatory`, `label`, `error`, `editor-height`, `name` properties in `<x-wb::trix></x-wb::trix>`
 -   Fixed some UI issues
 -   Removed `initial-value` from `trix` component
+
+## v1.14.1 Minor UI Changes
