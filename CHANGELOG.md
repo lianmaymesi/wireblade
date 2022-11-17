@@ -130,3 +130,5 @@ Added Auth Layouts
 -   Removed `initial-value` from `trix` component
 
 ## v1.14.1 Minor UI Changes
+
+## v1.14.2 Minor UI Changes

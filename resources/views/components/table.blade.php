@@ -4,7 +4,7 @@
             <table
                 class="text-sm text-left text-gray-500 dark:text-gray-300 min-w-full divide-y divide-gray-200 dark:divide-slate-700 shadow-lg">
                 <thead
-                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 select-none">
+                    class="text-xs text-slate-800 uppercase bg-slate-200 dark:bg-gray-700 dark:text-gray-400 select-none">
                     <tr>
                         {{ $head }}
                     </tr>
