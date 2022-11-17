@@ -2,6 +2,7 @@
 
 namespace Lianmaymesi\Wireblade\Components\Form;
 
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 
 class Trix extends Component
@@ -10,19 +11,39 @@ class Trix extends Component
 
     public $mandatory;
 
-    public $initialValue;
-
     public $error;
 
-    public function __construct($label = '', $mandatory = '', $initialValue = '', $error = '')
+    public $id;
+
+    public $editorHeight;
+
+    public $name;
+
+    public $toolTip;
+
+    public $helpText;
+
+    public $toolTipPosition;
+
+    public function __construct($label = '', $mandatory = '', $error = '', $editorHeight = null, $name = '', $toolTip = '', $toolTipPosition = 'ttop', $helpText = '')
     {
         $this->label = $label;
 
         $this->mandatory = $mandatory;
 
-        $this->initialValue = $initialValue;
-
         $this->error = $error;
+
+        $this->id = Str::random(8);
+
+        $this->editorHeight = $editorHeight;
+
+        $this->name = $name;
+
+        $this->toolTip = $toolTip;
+
+        $this->toolTipPosition = $toolTipPosition;
+
+        $this->helpText = $helpText;
     }
 
     public function render()

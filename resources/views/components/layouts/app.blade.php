@@ -1,4 +1,4 @@
-<div class="relative flex flex-auto" {{ $attributes->except(['class', 'title']) }}>
+<div class="relative" {{ $attributes->except(['class', 'title']) }}>
     <div x-show="isOpen()" x-transition:enter="transition ease-in-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-x-0 -translate-x-1/2"
         x-transition:enter-end="opacity-100 transform scale-x-100 translate-x-0"
@@ -28,6 +28,7 @@
             {{ $profile }}
         </div>
     </div>
+    @if($notification->isNotEmpty())
     <div x-show="notification" x-transition:enter="transition ease-in-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-x-0 translate-x-1/2"
         x-transition:enter-end="opacity-100 transform scale-x-100 -translate-x-0"
@@ -66,7 +67,8 @@
             </ul>
         </div>
     </div>
-    <div class="flex flex-col flex-auto w-full"
+    @endif
+    <div class="flex flex-col flex-auto"
         :class="{ 'fixed': window.innerWidth < 1024 && isOpen() || notification, 'ltr:ml-[280px] rtl:mr-[280px]': window.innerWidth > 1024 && isOpen(), 'relative': !isOpen() && !notification }">
         <div
             class="sticky top-0 flex items-center bg-green-400 dark:bg-slate-900 h-16 z-[200] px-4 shadow border-b dark:border-slate-600">
@@ -97,16 +99,20 @@
                         class="w-8 h-8 flex items-center justify-center relative hover:bg-green-500 dark:hover:bg-slate-700 rounded-full transition-colors duration-200">
                         <x-wb::icons.moon class="w-5 h-5 text-green-900 dark:text-slate-400" stroke-width="2" />
                     </button>
+                    @if($notification->isNotEmpty())
                     <button @click.prevent="notification = true"
                         class="w-8 h-8 flex items-center justify-center relative hover:bg-green-500 dark:hover:bg-slate-700 rounded-full transition-colors duration-200">
                         <x-wb::icons.bell class="w-5 h-5 text-green-900 dark:text-slate-400" stroke-width="2" />
                         <span class="absolute rounded-full h-2 w-2 bg-red-500 top-1 ltr:right-1 rtl:left-1"></span>
                     </button>
+                    @endif
                 </div>
             </div>
         </div>
-        <div class="relative flex items-top sm:items-center py-2 md:py-4 px-4 w-full bg-gray-50 dark:bg-slate-800">
-            {{ $content }}
+        <div class="relative flex items-top sm:items-center py-2 md:py-4 px-4 bg-gray-50 dark:bg-slate-800">
+            <div class="w-full">
+                {{ $content }}
+            </div>
         </div>
         <div
             :class="{ 'fixed top-0 bottom-0 left-0 right-0 z-[200] opacity-50 bg-black': window.innerWidth < 1024 && isOpen(), 'relative': !isOpen() }">

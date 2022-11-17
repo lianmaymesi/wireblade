@@ -2,26 +2,6 @@
 
 All notable changes to `wireblade` will be documented in this file.
 
-## v1.12.0 added new property `linkSettings` for profile - 2022-07-06
-
--   Added new route property for `linkSettings` in profile tag
-
-## Added Select tag - 2022-04-20
-
--   Added `Select` html tag
-
-```html
-<x-wb::select label="Colors">
-    <option value="Red">Red</option>
-    <option></option>
-    <option></option>
-</x-wb::select>
-```
-
-## Fixed Minor issues - 2022-04-18
-
-This package has some missed classes and it has been fixed in this release.
-
 ## 0.0.1 - 2022-02-26
 
 -   Added `App` layout
@@ -141,3 +121,10 @@ Added Auth Layouts
 ## v1.13.2 Minor fixes
 
 ## v1.13.3 Minor fixes
+
+## v1.14 Added Trix Image Upload Trait & Some UI Fixes
+
+-   Added trait `HasFileAttachment` class for uploading images
+-   Added `mandatory`, `label`, `error`, `editor-height`, `name` properties in `<x-wb::trix></x-wb::trix>`
+-   Fixed some UI issues
+-   Removed `initial-value` from `trix` component

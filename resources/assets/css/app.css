@@ -7,11 +7,11 @@
 }
 
 .tooltip {
-    @apply invisible group-hover:visible w-[150px] bg-black text-white text-center rounded-md p-3 absolute z-[1] text-xs font-medium shadow-md transition-transform duration-300;
+    @apply invisible absolute z-[1] w-[150px] rounded-md bg-black p-3 text-center text-xs font-medium text-white shadow-md transition-transform duration-300 group-hover:visible;
 }
 
 .tooltip::after {
-    @apply content-[''] border-4;
+    @apply border-4 content-[''];
 }
 
 .tooltip.ttop {
@@ -31,7 +31,7 @@
 }
 
 .tooltip.tright {
-    @apply left-[150%] -right-[67px] -mb-[15px] -top-[125%];
+    @apply left-[150%] -right-[67px] -top-[125%] -mb-[15px];
 }
 
 .tooltip.tright::after {
@@ -39,7 +39,7 @@
 }
 
 .tooltip.tleft {
-    @apply -left-[156px] -mb-[15px] -top-[125%];
+    @apply -left-[156px] -top-[125%] -mb-[15px];
 }
 
 .tooltip.tleft::after {
@@ -48,4 +48,21 @@
 
 [data-trix-button-group="file-tools"] {
     @apply hidden;
+}
+
+trix-toolbar {
+    @apply sticky top-16 z-10 -m-4 bg-gray-50 px-4 pt-2 dark:bg-gray-800;
+}
+
+trix-toolbar .trix-button--icon {
+    @apply !rounded !border-0 !bg-green-400;
+}
+
+trix-toolbar .trix-button-group,
+trix-toolbar .trix-button-row {
+    @apply !space-x-1 !border-0;
+}
+
+trix-toolbar .trix-button.trix-active {
+    @apply !bg-green-200;
 }

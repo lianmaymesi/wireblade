@@ -23,6 +23,12 @@ Optionaly, you can publish the layouts for customizing:
 php artisan vendor:publish --tag="wireblade-views"
 ```
 
+Mandatory if you use trix editor, it helps to configure the storage disk:
+
+```bash
+php artisan vendor:publish --tag="wireblade-config"
+```
+
 Optionaly, you can publish the components views & classes:
 
 ```bash
@@ -53,6 +59,7 @@ You can extend the `app layout` by creating `resources\views\layouts\app.blade.p
     </x-slot>
 
     <!---Adding Notification features -->
+    // Notification is optional if your notification has an empty content, it will hide automatically.
     <x-slot name="notification">
         <x-wb::notification-item :read="$isRead" wire:key="$key">
             <div class="relative h-11 w-11">
@@ -256,8 +263,16 @@ You can use forms, currently limited for testing purposes.
 
 If you are using trix editor you should add `@trixCss` & `@trixJs` directives in below the livewire directives on your home page.
 
+And also if you want to add image upload through trix editor, `use WithFileAttachment` trait.
+
 ```php
-<x-wb::trix label="Description" id="product" wire:model.defer="description" />
+\\ Page.php
+use HasFileAttachment;
+
+public $description = '';
+
+\\ page.blade.php
+<x-wb::trix label="Description" wire:model.defer="description" name="description" editor-height="100rem" />
 ```
 
 ## Links

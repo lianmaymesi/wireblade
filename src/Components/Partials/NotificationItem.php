@@ -8,7 +8,7 @@ class NotificationItem extends Component
 {
     public $read;
 
-    public function __construct($read)
+    public function __construct($read = '')
     {
         $this->read = $read;
     }

@@ -16,11 +16,11 @@ class Wireblade
 
     public static function trixCss()
     {
-        return '<link rel="stylesheet" href="https://unpkg.com/trix@2.0.0-alpha.1/dist/trix.css"></link>';
+        return '<link rel="stylesheet" href="https://unpkg.com/trix@2.0.0-beta.0/dist/trix.css"></link>';
     }
 
     public static function trixJs()
     {
-        return '<script src="https://unpkg.com/trix@2.0.0-alpha.1/dist/trix.umd.js"></script>';
+        return '<script src="https://unpkg.com/trix@2.0.0-beta.0/dist/trix.umd.min.js"></script>';
     }
 }
