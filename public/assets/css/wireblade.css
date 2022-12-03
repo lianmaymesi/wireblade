@@ -653,9 +653,6 @@ video {
 .w-8 {
   width: 2rem;
 }
-.w-\[calc\(100\%-280px\)\] {
-  width: calc(100% - 280px);
-}
 .w-10 {
   width: 2.5rem;
 }
@@ -2055,6 +2052,10 @@ trix-toolbar .trix-button.trix-active {
 
   .lg\:table-cell {
     display: table-cell;
+  }
+
+  .lg\:w-\[calc\(100\%-280px\)\] {
+    width: calc(100% - 280px);
   }
 
   .lg\:w-1\/2 {
