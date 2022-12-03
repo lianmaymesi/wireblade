@@ -69,7 +69,7 @@
     </div>
     @endif
     <div class="flex flex-col flex-auto"
-        :class="{ 'fixed': window.innerWidth < 1024 && isOpen() || notification, 'ltr:ml-[280px] rtl:mr-[280px]': window.innerWidth > 1024 && isOpen(), 'relative': !isOpen() && !notification }">
+        :class="{ 'fixed w-[calc(100%-280px)]': window.innerWidth < 1024 && isOpen() || notification, 'ltr:ml-[280px] rtl:mr-[280px]': window.innerWidth > 1024 && isOpen(), 'relative': !isOpen() && !notification }">
         <div
             class="sticky top-0 flex items-center bg-green-400 dark:bg-slate-900 h-16 z-[200] px-4 shadow border-b dark:border-slate-600">
             <button x-show="!isOpen()" @click.prevent="handleOpen()"
