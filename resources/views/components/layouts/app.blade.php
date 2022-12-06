@@ -1,4 +1,4 @@
-<div class="relative flex" {{ $attributes->except(['class', 'title']) }}>
+<div class="relative" {{ $attributes->except(['class', 'title']) }}>
     <div x-show="isOpen()" x-transition:enter="transition ease-in-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-x-0 -translate-x-1/2"
         x-transition:enter-end="opacity-100 transform scale-x-100 translate-x-0"
@@ -68,7 +68,7 @@
         </div>
     </div>
     @endif
-    <div class="flex flex-col flex-auto"
+    <div class="flex flex-col"
         :class="{ 'fixed w-full lg:w-[calc(100%-280px)]': window.innerWidth < 1024 && isOpen() || notification, 'ltr:ml-[280px] rtl:mr-[280px]': window.innerWidth > 1024 && isOpen(), 'relative': !isOpen() && !notification }">
         <div
             class="sticky top-0 flex items-center bg-green-400 dark:bg-slate-900 h-16 z-[200] px-4 shadow border-b dark:border-slate-600">

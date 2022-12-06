@@ -136,3 +136,5 @@ Added Auth Layouts
 ## v1.14.3 Minor UI Changes
 
 ## v1.14.4 Minor UI Changes
+
+## v1.14.5 Minor UI Changes
