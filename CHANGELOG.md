@@ -140,3 +140,7 @@ Added Auth Layouts
 ## v1.14.5 Minor UI Changes
 
 ## v1.14.6 Minor Changes
+
+## v1.15.0 Added Sortable & direction
+
+-   Added `sortable` `direction` property in `Heading` tag for `table`
