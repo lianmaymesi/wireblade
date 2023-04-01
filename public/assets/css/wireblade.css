@@ -701,6 +701,9 @@ video {
 .basis-auto {
   flex-basis: auto;
 }
+.table-auto {
+  table-layout: auto;
+}
 .translate-y-4 {
   --tw-translate-y: 1rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -863,9 +866,6 @@ video {
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.whitespace-nowrap {
   white-space: nowrap;
 }
 .rounded-lg {
