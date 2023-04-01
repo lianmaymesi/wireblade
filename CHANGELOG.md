@@ -152,3 +152,5 @@ Added Auth Layouts
 -   Added `sortable` `direction` property in `Heading` tag for `table`
 
 ## v1.15.1 Minor Changes
+
+## v1.15.2 Minor Changes
