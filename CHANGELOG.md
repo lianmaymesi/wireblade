@@ -154,3 +154,5 @@ Added Auth Layouts
 ## v1.15.1 Minor Changes
 
 ## v1.15.2 Minor Changes
+
+## v1.15.3 Minor Changes
