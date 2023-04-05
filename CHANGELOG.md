@@ -162,3 +162,5 @@ Added Auth Layouts
 ## v2.0.1 Minor Fixes
 
 ## v2.0.2 Minor Fixes
+
+## v2.0.3 Minor Fixes
