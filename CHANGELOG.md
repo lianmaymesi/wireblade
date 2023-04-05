@@ -158,3 +158,5 @@ Added Auth Layouts
 ## v1.15.3 Minor Changes
 
 ## v2.0.0 Support Laravel 10
+
+## v2.0.1 Minor Fixes
