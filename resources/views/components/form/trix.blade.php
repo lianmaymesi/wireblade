@@ -20,11 +20,23 @@ $height = $editorHeight ?? '10rem';
             @endif
         </div>
     </div>
-    <div x-data="{textEditor:@entangle($attributes->wire('model')).defer}"
-        x-init="()=>{setEditor{{$id}}Value(textEditor)}" @reseteditor{{$id}}.window="setEditorValue('');" wire:ignore>
-        <input x-ref="editor{{$id}}" id="editor-x{{$id}}" type="hidden" value="">
-        <trix-editor id="editor{{$id}}" input="editor-x{{$id}}"
-            x-on:trix-change="textEditor=$refs.editor{{$id}}.value;">
+    <div
+        x-data="{
+            value: @entangle($attributes->wire('model')).defer,
+            isFocused() { return document.activeElement !== this.$refs.trix },
+            setValue() { this.$refs.trix.editor.loadHTML(this.value) }
+        }"
+        @if ($hideAttachment)
+            @trix-file-accept.preventDefault
+        @endif
+        x-init="setValue();
+        $watch('value', () => isFocused() && setValue())"
+        x-on:trix-change="value = $event.target.value"
+        {{ $attributes->whereDoesntStartWith('wire:model') }}
+        wire:ignore
+    >
+        <input id="{{ $id }}" type="hidden">
+        <trix-editor input="{{ $id }}" x-ref="trix" class="prose max-w-full bg-white" style="min-height: {{ $editorHeight }}">
         </trix-editor>
     </div>
     @if($error)
@@ -33,60 +45,44 @@ $height = $editorHeight ?? '10rem';
     </span>
     @endif
 </div>
-<script>
-    function setEditor{{$id}}Value(value) {
-        let element{{$id}}= document.getElementById("editor{{$id}}");
-        let input = document.getElementById("editor-x{{$id}}");
-        if(value=='') {
-            input.value = "";
-            element{{$id}}.innerHTML = "";
-        }
-        else {
-            element{{$id}}.editor.insertHTML(value);
-        }
-    }
-
-    var trixEditor = document.getElementById("{{$id}}");
-
-    var mimeTypes = ["image/png", "image/jpeg", "image/jpg"];
-
-    addEventListener("trix-file-accept", function(event) {
-        if (! mimeTypes.includes(event.file.type) ) {
-            return event.preventDefault();
-        }
-    });
-
-    addEventListener("trix-attachment-add", function(event){
-        uploadTrixImage(event.attachment);
-    });
-
-    function uploadTrixImage(attachment){
-        // upload with livewire
-        @this.upload(
-            'photos',
-            attachment.file,
-            function (uploadedURL) {
-                // We need to create a custom event.
-                // This event will create a pause in thread execution until we get the Response URL from the Trix Component @completeUpload
-                const trixUploadCompletedEvent = `trix-upload-completed:${btoa(uploadedURL)}`;
-                const trixUploadCompletedListener = function(event) {
-                    attachment.setAttributes(event.detail);
-                    window.removeEventListener(trixUploadCompletedEvent, trixUploadCompletedListener);
+@once
+    @push('scripts')
+        <script>
+            addEventListener("trix-attachment-add", function(event) {
+                if (event.attachment.file) {
+                    uploadTrixImage(event.attachment);
                 }
-                window.addEventListener(trixUploadCompletedEvent, trixUploadCompletedListener);
-                // call the Trix Component @completeUpload below
-                @this.call('completeUpload', uploadedURL, trixUploadCompletedEvent);
-            },
-            function(event){
-                attachment.setUploadProgress(event.detail.progress);
-            },
-        )
-    }
+            });
 
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = '.cssClass { min-height: {{ $height }}; margin-top: 17px; }';
-    document.getElementsByTagName('head')[0].appendChild(style);
-
-    document.getElementById('{{ $thisVal }}').className = 'cssClass';
-</script>
+            function uploadTrixImage(attachment) {
+                // upload with livewire
+                @this.upload(
+                    'photos',
+                    attachment.file,
+                    function(uploadedURL) {
+                        // We need to create a custom event.
+                        // This event will create a pause in thread execution until we get the Response URL from the Trix Component @completeUpload
+                        const trixUploadCompletedEvent = `trix-upload-completed:${btoa(uploadedURL)}`;
+                        const trixUploadCompletedListener = function(event) {
+                            attachment.setAttributes(event.detail);
+                            window.removeEventListener(trixUploadCompletedEvent, trixUploadCompletedListener);
+                        }
+                        window.addEventListener(trixUploadCompletedEvent, trixUploadCompletedListener);
+                        // call the Trix Component @completeUpload below
+                        @this.call('completeUpload', uploadedURL, trixUploadCompletedEvent);
+                    },
+                    function(event) {
+                        attachment.setUploadProgress(event.detail.progress);
+                    }
+                )
+            }
+        </script>
+    @endpush
+@endonce
+@if ($hideAttachment)
+    <style>
+        .{{ $id }} [data-trix-button-group="file-tools"] {
+            display: none !important;
+        }
+    </style>
+@endif
