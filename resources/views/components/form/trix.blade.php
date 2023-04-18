@@ -81,12 +81,11 @@ $height = $editorHeight ?? '10rem';
                 attachment.setUploadProgress(event.detail.progress);
             },
         )
-        // complete the upload and get the actual file URL
     }
 
     var style = document.createElement('style');
     style.type = 'text/css';
-    style.innerHTML = '.cssClass { height: {{ $height }}; margin-top: 17px; }';
+    style.innerHTML = '.cssClass { min-height: {{ $height }}; margin-top: 17px; }';
     document.getElementsByTagName('head')[0].appendChild(style);
 
     document.getElementById('{{ $thisVal }}').className = 'cssClass';

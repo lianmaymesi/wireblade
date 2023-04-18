@@ -164,3 +164,5 @@ Added Auth Layouts
 ## v2.0.2 Minor Fixes
 
 ## v2.0.3 Minor Fixes
+
+## v2.0.4 Minor Fixes in Trix Auto Height
