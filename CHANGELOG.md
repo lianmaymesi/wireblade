@@ -168,3 +168,5 @@ Added Auth Layouts
 ## v2.0.4 Minor Fixes in Trix Auto Height
 
 ## v2.0.5 Minor Fixes in Trix
+
+## v2.1.0 Added `hide-attachment` in Trix

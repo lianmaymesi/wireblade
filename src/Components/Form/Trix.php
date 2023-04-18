@@ -25,7 +25,9 @@ class Trix extends Component
 
     public $toolTipPosition;
 
-    public function __construct($label = '', $mandatory = '', $error = '', $editorHeight = null, $name = '', $toolTip = '', $toolTipPosition = 'ttop', $helpText = '')
+    public $hideAttachment;
+
+    public function __construct($label = '', $mandatory = '', $error = '', $editorHeight = null, $name = '', $toolTip = '', $toolTipPosition = 'ttop', $helpText = '', $hideAttachment = '')
     {
         $this->label = $label;
 
@@ -44,6 +46,8 @@ class Trix extends Component
         $this->toolTipPosition = $toolTipPosition;
 
         $this->helpText = $helpText;
+
+        $this->hideAttachment = $hideAttachment;
     }
 
     public function render()
