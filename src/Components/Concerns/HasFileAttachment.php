@@ -2,8 +2,6 @@
 
 namespace Lianmaymesi\Wireblade\Components\Concerns;
 
-use Illuminate\Support\Facades\Storage;
-
 /**
  * It helps to attach the images
  */
