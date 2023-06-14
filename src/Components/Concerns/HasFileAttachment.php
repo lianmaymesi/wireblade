@@ -22,11 +22,9 @@ trait HasFileAttachment
             if ($photo->getFilename() == $uploadedUrl) {
                 $newFilename = $photo->store('/', config('wireblade.file_storage_disk'));
 
-                $url = Storage::url($newFilename);
-
                 $this->dispatchBrowserEvent($trixUploadCompletedEvent, [
-                    'url' => $url,
-                    'href' => $url,
+                    'url' => $newFilename,
+                    'href' => $newFilename,
                 ]);
             }
         }

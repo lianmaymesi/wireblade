@@ -170,3 +170,5 @@ Added Auth Layouts
 ## v2.0.5 Minor Fixes in Trix
 
 ## v2.1.0 Added `hide-attachment` in Trix
+
+## v2.1.1 Fixed image issues in Trix
