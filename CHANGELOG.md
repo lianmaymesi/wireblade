@@ -2,6 +2,10 @@
 
 All notable changes to `wireblade` will be documented in this file.
 
+## v1.17 Fixed Minor Issues - 2024-11-05
+
+**Full Changelog**: https://github.com/lianmaymesi/wireblade/compare/v1.16.1...v1.17
+
 ## v2.2 Upgraded to L10, Vite - 2024-11-05
 
 ### What's Changed
@@ -36,18 +40,22 @@ All notable changes to `wireblade` will be documented in this file.
 ## 0.0.1 - 2022-02-26
 
 - Added `App` layout
+  
 - Added couple of form fields
+  
 - 1. `input` with the following types `text` `email` `number` `date` `datetime-local` `password` `month` `search` `time` `url` `week` `tel`
-    
+  
 - 
 - 
 - 1. `textarea`
-    
+  
 - 
 - 
 - 
 - Dark Mode
+  
 - Sidebar & Notification drawer
+  
 
 ## 0.0.2 - 2022-02-26
 
@@ -87,6 +95,7 @@ Added Auth Layouts
     <option></option>
     <option></option>
 </x-wb::select>
+
 
 ```
 ## v1.3.0 Added Modal & Dialog component - 2022-04-20
