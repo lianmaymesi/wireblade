@@ -68,14 +68,6 @@ class WirebladeServiceProvider extends PackageServiceProvider
             ], 'wireblade-components');
         }
 
-        Blade::directive('wbstyles', function () {
-            return \Lianmaymesi\Wireblade\Wireblade::css();
-        });
-
-        Blade::directive('wbscripts', function () {
-            return \Lianmaymesi\Wireblade\Wireblade::js();
-        });
-
         Blade::directive('trixCss', function () {
             return \Lianmaymesi\Wireblade\Wireblade::trixCss();
         });

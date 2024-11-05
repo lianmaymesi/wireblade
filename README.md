@@ -67,7 +67,7 @@ You can extend the `app layout` by creating `resources\views\layouts\app.blade.p
             </div>
             <div class="flex flex-col">
                 <a href="" class="text-sm font-semibold"> LiAn Dhas added new Product </a>
-                <div class="mt-1 flex space-x-2 text-xs">
+                <div class="flex mt-1 space-x-2 text-xs">
                     <span> 3 hrs ago </span>
                     <span class="text-gray-200"> &verbar; </span>
                     <button>Mark as read</button>
@@ -119,7 +119,11 @@ You can extend the `auth layout` by creating `resources\views\layouts\app.blade.
 
 ## Directives for styles & scripts
 
-Add these two styles inside your `<head></head>` tag `@wbstyles` & `@wbscripts`
+Add these two styles inside your `<head></head>`
+
+```php
+    {{ Vite::useHotFile('vendor/wireblade/wireblade.hot')->useBuildDirectory('vendor/wireblade')->withEntryPoints(['resources/assets/css/app.css', 'resources/assets/js/app.js']) }}
+```
 
 ## Adding Dark Mode
 
@@ -231,7 +235,7 @@ You can use forms, currently limited for testing purposes.
 
 <x-wb::input label="Website" type="url" placeholder="www.formwind.com" prefix-label mandatory>
     <x-slot name="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
