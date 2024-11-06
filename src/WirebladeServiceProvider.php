@@ -47,6 +47,22 @@ class WirebladeServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
+        if ($this->app->runningInConsole()) {
+
+            $this->publishes([
+                __DIR__ . '/../public/vendor/wireblade' => public_path('vendor/wireblade'),
+            ], ['wireblade-assets']);
+
+            $this->publishes([
+                __DIR__ . '/../public/assets' => public_path('vendor/wireblade-assets'),
+            ], 'wireblade-external-assets');
+
+            $this->publishes([
+                __DIR__ . './Components' => app_path('View/Components/vendor/wireblade'),
+                __DIR__ . '/../resources/views/components' => resource_path('views/vendor/wireblade/components'),
+            ], 'wireblade-components');
+        }
+
         $package
             ->name('wireblade')
             ->hasConfigFile()
@@ -56,22 +72,6 @@ class WirebladeServiceProvider extends PackageServiceProvider
     public function packageBooted()
     {
         $this->configureComponents();
-
-        if ($this->app->runningInConsole()) {
-
-            $this->publishes([
-                __DIR__ . '/../public/vendor/wireblade' => public_path('vendor/wireblade'),
-            ], ['wireblade-assets']);
-
-            $this->publishes([
-                __DIR__ . '/../public/assets' => public_path('wireblade'),
-            ], 'wireblade-external-assets');
-
-            $this->publishes([
-                __DIR__ . './Components' => app_path('View/Components/vendor/wireblade'),
-                __DIR__ . '/../resources/views/components' => resource_path('views/vendor/wireblade/components'),
-            ], 'wireblade-components');
-        }
 
         Blade::directive('trixCss', function () {
             return \Lianmaymesi\Wireblade\Wireblade::trixCss();

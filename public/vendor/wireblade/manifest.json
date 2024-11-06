@@ -1,0 +1,22 @@
+{
+  "_@alpinejs-8558996c.js": {
+    "file": "assets/@alpinejs-8558996c.js"
+  },
+  "_alpinejs-43129efb.js": {
+    "file": "assets/alpinejs-43129efb.js"
+  },
+  "resources/assets/css/app.css": {
+    "file": "assets/app-fba5d66b.css",
+    "isEntry": true,
+    "src": "resources/assets/css/app.css"
+  },
+  "resources/assets/js/app.js": {
+    "file": "assets/app-ab26705e.js",
+    "imports": [
+      "_alpinejs-43129efb.js",
+      "_@alpinejs-8558996c.js"
+    ],
+    "isEntry": true,
+    "src": "resources/assets/js/app.js"
+  }
+}
