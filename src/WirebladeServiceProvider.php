@@ -58,6 +58,11 @@ class WirebladeServiceProvider extends PackageServiceProvider
         $this->configureComponents();
 
         if ($this->app->runningInConsole()) {
+
+            $this->publishes([
+                __DIR__ . '/../public/vendor/wireblade' => public_path('vendor/wireblade'),
+            ], ['wireblade-assets']);
+
             $this->publishes([
                 __DIR__ . '/../public/assets' => public_path('wireblade'),
             ], 'wireblade-assets');
