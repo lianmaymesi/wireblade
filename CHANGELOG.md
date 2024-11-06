@@ -2,6 +2,10 @@
 
 All notable changes to `wireblade` will be documented in this file.
 
+## v2.3.1 - 2024-11-06
+
+**Full Changelog**: https://github.com/lianmaymesi/wireblade/compare/v2.3...v2.3.1
+
 ## v2.3 - 2024-11-06
 
 **Full Changelog**: https://github.com/lianmaymesi/wireblade/compare/v2.2...v2.3
@@ -99,6 +103,7 @@ Added Auth Layouts
     <option></option>
     <option></option>
 </x-wb::select>
+
 
 
 
