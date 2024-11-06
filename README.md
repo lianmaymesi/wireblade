@@ -17,6 +17,11 @@ You can install the package via composer:
 composer require lianmaymesi/wireblade
 ```
 
+```bash
+php artisan vendor:publish --tag="wireblade-assets"
+php artisan vendor:publish --tag="wireblade-external-assets"
+```
+
 Optionaly, you can publish the layouts for customizing:
 
 ```bash
