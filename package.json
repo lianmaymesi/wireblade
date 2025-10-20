@@ -14,7 +14,7 @@
         "prettier": "^3.3.2",
         "prettier-plugin-tailwindcss": "^0.5.14",
         "tailwindcss": "^3.3.3",
-        "vite": "^4.5.9"
+        "vite": "^7.1.11"
     },
     "dependencies": {
         "@alpinejs/collapse": "^3.13.3",
