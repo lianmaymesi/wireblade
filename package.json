@@ -5,7 +5,7 @@
         "build": "vite build"
     },
     "devDependencies": {
-        "@shufo/prettier-plugin-blade": "^1.14.1",
+        "@shufo/prettier-plugin-blade": "^1.16.2",
         "@tailwindcss/forms": "^0.5.6",
         "autoprefixer": "^10.4.14",
         "axios": "^1.18.0",
